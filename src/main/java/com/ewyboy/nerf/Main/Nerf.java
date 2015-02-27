@@ -1,5 +1,9 @@
-package com.ewyboy.nerf;
+package com.ewyboy.nerf.Main;
 
+import com.ewyboy.nerf.Modify.Add;
+import com.ewyboy.nerf.Config.Config;
+import com.ewyboy.nerf.Modify.Remove;
+import com.ewyboy.nerf.Modify.Tweaker;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 

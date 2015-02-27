@@ -1,7 +1,8 @@
-package com.ewyboy.nerf;
+package com.ewyboy.nerf.Modify;
 
+import com.ewyboy.nerf.Config.Config;
+import com.ewyboy.nerf.Util.RecipeRemover;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
@@ -33,6 +34,9 @@ public class Remove {
             if (output != null && output.getItem() == Item.getItemFromBlock(Blocks.planks)) {
                 iterator.remove();
             }
+            if (output != null && output.getItem() == Item.getItemFromBlock(Blocks.torch)) {
+                iterator.remove();
+            }
         }
     }
 
@@ -55,6 +59,11 @@ public class Remove {
     }
 
     public static void removeFurnace() {
-        RecipeRemover.removeFurnaceRecipeVanilla(new ItemStack(Item.getItemFromBlock(Blocks.stone)));
+        if (Config.removeGlassSmelting) {
+            RecipeRemover.removeFurnaceRecipeVanilla(new ItemStack(Item.getItemFromBlock(Blocks.glass)));
+        }
+        if (Config.removeStoneSmelting) {
+            RecipeRemover.removeFurnaceRecipeVanilla(new ItemStack(Item.getItemFromBlock(Blocks.stone)));
+        }
     }
 }

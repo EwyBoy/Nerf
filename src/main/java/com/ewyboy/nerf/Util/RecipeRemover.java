@@ -1,4 +1,4 @@
-package com.ewyboy.nerf;
+package com.ewyboy.nerf.Util;
 
 import java.util.Iterator;
 import java.util.List;
@@ -115,6 +115,5 @@ public class RecipeRemover
         ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).removeItem(resultItem);
         ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING).removeItem(resultItem);
         ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).removeItem(resultItem);
-
     }
 }
